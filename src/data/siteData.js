@@ -1,3 +1,5 @@
+const IMG_BASE = `${import.meta.env.BASE_URL}images/`
+
 export const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Overview', href: '#overview' },
@@ -12,11 +14,14 @@ export const navLinks = [
 ]
 
 export const overviewCards = [
-  { label: 'Study period', value: '2000–2019' },
-  { label: 'Unit of analysis', value: 'State-year' },
-  { label: 'Main outcome', value: 'Gun-related deaths and crude death rates' },
+  { label: 'Study Period', value: '2000–2019' },
+  { label: 'Unit of Analysis', value: 'State-year' },
+  { label: 'Main Outcome', value: 'Gun-related deaths and crude death rates' },
   { label: 'Scope', value: 'Descriptive state-level analysis' },
-  { label: 'Focus', value: 'Trends, comparisons, maps, heatmaps, and regional variation' },
+  {
+    label: 'Focus',
+    value: 'Trends, comparisons, maps, heatmaps, and regional variation',
+  },
 ]
 
 export const objectives = [
@@ -34,37 +39,41 @@ export const findings = [
   'California, Texas, and Florida had the highest total deaths.',
   'Wyoming showed one of the sharpest increases.',
   'New York showed one of the clearest decreases.',
-  'The South had the highest regional mortality pattern.',
-  'The Northeast had the lowest regional mortality pattern.',
+  'The South showed the highest regional mortality pattern.',
+  'The Northeast showed the lowest regional mortality pattern.',
 ]
 
 export const nationalTrendsFigures = [
   {
-    id: 1,
+    id: 'figure-1',
     title: 'Figure 1. U.S. Total Gun-Related Deaths by Year (2000–2019)',
-    path: '/images/figure_1_us_total_firearm_deaths_by_year.png',
-    caption: 'National totals show a substantial upward pattern across the study period.'
+    image: `${IMG_BASE}figure_1_us_total_firearm_deaths_by_year.png`,
+    caption:
+      'National totals show a substantial upward pattern across the study period.',
   },
   {
-    id: 2,
+    id: 'figure-2',
     title: 'Figure 2. U.S. Crude Gun-Related Death Rate by Year (2000–2019)',
-    path: '/images/figure_2_us_crude_firearm_death_rate_by_year.png',
-    caption: 'Crude death rates also rose over time, indicating that the increase was not only driven by population size.'
+    image: `${IMG_BASE}figure_2_us_crude_firearm_death_rate_by_year.png`,
+    caption:
+      'Crude death rates also rose over time, indicating that the increase was not only driven by population size.',
   },
 ]
 
 export const stateComparisonFigures = [
   {
-    id: 3,
-    title: 'Figure 3. Top 10 States by Average Crude Death Rate',
-    path: '/images/figure_3_top10_states_avg_crude_rate.png',
-    caption: 'This comparison highlights the states with the highest long-run average gun-related death rates.'
+    id: 'figure-3',
+    title: 'Figure 3. Top 10 States by Average Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_3_top10_states_avg_crude_rate.png`,
+    caption:
+      'These states recorded the highest long-term average crude death rates across the study period.',
   },
   {
-    id: 4,
-    title: 'Figure 4. Lowest 10 States by Average Crude Death Rate',
-    path: '/images/figure_4_least10_states_avg_crude_rate.png',
-    caption: 'This figure highlights the states with the lowest long-run average gun-related death rates.'
+    id: 'figure-4',
+    title: 'Figure 4. Lowest 10 States by Average Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_4_least10_states_avg_crude_rate.png`,
+    caption:
+      'These states remained at the lower end of long-term average crude death rates.',
   },
 ]
 
@@ -73,22 +82,25 @@ export const changeGroups = [
     label: 'Largest increases',
     figures: [
       {
-        id: 5,
-        title: 'Figure 5. Top 10 Increase in Crude Death Rate',
-        path: '/images/figure_5_top10_increase_crude_rate.png',
-        caption: 'States in this group showed the largest upward shifts in crude gun-related death rates.'
+        id: 'figure-5',
+        title: 'Figure 5. Top 10 States with the Largest Increase in Crude Death Rate',
+        image: `${IMG_BASE}figure_5_top10_increase_crude_rate.png`,
+        caption:
+          'This figure identifies the states with the sharpest upward change in crude death rates.',
       },
       {
-        id: 7,
-        title: 'Figure 7. Top 10 Increase in Total Deaths',
-        path: '/images/figure_7_top10_increase_deaths.png',
-        caption: 'This figure compares states with the largest increases in total gun-related deaths.'
+        id: 'figure-7',
+        title: 'Figure 7. Top 10 States with the Largest Increase in Total Gun-Related Deaths',
+        image: `${IMG_BASE}figure_7_top10_increase_deaths.png`,
+        caption:
+          'This figure highlights states with the greatest increase in absolute counts of gun-related deaths.',
       },
       {
-        id: 11,
-        title: 'Figure 11. Top 10 Absolute Change Slope (2000–2019)',
-        path: '/images/figure_11_top10_absolute_change_slope_2000_2019.png',
-        caption: 'Long-run slope differences show where the change trajectory was steepest.'
+        id: 'figure-11',
+        title: 'Figure 11. Top 10 States by Absolute Change Slope, 2000–2019',
+        image: `${IMG_BASE}figure_11_top10_absolute_change_slope_2000_2019.png`,
+        caption:
+          'This figure compares states by the magnitude of long-run upward or downward change over time.',
       },
     ],
   },
@@ -96,16 +108,18 @@ export const changeGroups = [
     label: 'Largest decreases',
     figures: [
       {
-        id: 6,
-        title: 'Figure 6. Top 10 Decrease in Crude Death Rate',
-        path: '/images/figure_6_top10_decrease_crude_rate.png',
-        caption: 'These states showed the clearest reductions in crude gun-related death rates.'
+        id: 'figure-6',
+        title: 'Figure 6. Top 10 States with the Largest Decrease in Crude Death Rate',
+        image: `${IMG_BASE}figure_6_top10_decrease_crude_rate.png`,
+        caption:
+          'This figure identifies the states with the clearest reductions in crude death rates.',
       },
       {
-        id: 8,
-        title: 'Figure 8. Top 10 Decrease in Total Deaths',
-        path: '/images/figure_8_top10_decrease_deaths.png',
-        caption: 'This comparison shows where total gun-related deaths decreased most clearly.'
+        id: 'figure-8',
+        title: 'Figure 8. Top 10 States with the Largest Decrease in Total Gun-Related Deaths',
+        image: `${IMG_BASE}figure_8_top10_decrease_deaths.png`,
+        caption:
+          'This figure highlights states that experienced the largest decline in total gun-related deaths.',
       },
     ],
   },
@@ -113,22 +127,25 @@ export const changeGroups = [
     label: 'Start vs end year comparison',
     figures: [
       {
-        id: 9,
-        title: 'Figure 9. Top 10 States: 2019 vs 2000 Crude Rate',
-        path: '/images/figure_9_top10_states_2019_vs_2000_crude_rate.png',
-        caption: 'This figure compares beginning and end-year crude death rates in selected high-change states.'
+        id: 'figure-9',
+        title: 'Figure 9. Top 10 States: 2019 vs 2000 Crude Death Rate',
+        image: `${IMG_BASE}figure_9_top10_states_2019_vs_2000_crude_rate.png`,
+        caption:
+          'This figure compares crude death rates between the beginning and end of the study period for selected higher-rate states.',
       },
       {
-        id: 10,
-        title: 'Figure 10. Lowest 10 States: 2019 vs 2000 Crude Rate',
-        path: '/images/figure_10_least10_states_2019_vs_2000_crude_rate.png',
-        caption: 'This comparison highlights how lower-rate states changed between the first and final year.'
+        id: 'figure-10',
+        title: 'Figure 10. Lowest 10 States: 2019 vs 2000 Crude Death Rate',
+        image: `${IMG_BASE}figure_10_least10_states_2019_vs_2000_crude_rate.png`,
+        caption:
+          'This figure compares crude death rates between 2000 and 2019 for lower-rate states.',
       },
       {
-        id: 12,
-        title: 'Figure 12. Top 10 States: 2019 vs 2000 Total Deaths',
-        path: '/images/figure_12_top10_states_2019_vs_2000_deaths.png',
-        caption: 'This figure contrasts total deaths in the first and final year for selected states.'
+        id: 'figure-12',
+        title: 'Figure 12. Top 10 States: 2019 vs 2000 Total Gun-Related Deaths',
+        image: `${IMG_BASE}figure_12_top10_states_2019_vs_2000_deaths.png`,
+        caption:
+          'This figure compares total gun-related deaths in 2000 and 2019 for selected states.',
       },
     ],
   },
@@ -136,85 +153,98 @@ export const changeGroups = [
 
 export const heatmapMapFigures = [
   {
-    id: 13,
-    title: 'Figure 13. Full State-Year Heatmap of Crude Death Rate',
-    path: '/images/figure_13_full_state_year_heatmap_crude_rate.png',
-    caption: 'The full heatmap shows persistent variation across states and across years.'
+    id: 'figure-13',
+    title: 'Figure 13. Full State-Year Heatmap of Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_13_full_state_year_heatmap_crude_rate.png`,
+    caption:
+      'The complete heatmap shows that death-rate patterns remained highly uneven across states over time.',
   },
   {
-    id: 14,
-    title: 'Figure 14. Top 20 States Heatmap of Crude Death Rate',
-    path: '/images/figure_14_top20_states_heatmap_crude_rate.png',
-    caption: 'This heatmap focuses on higher-rate states to make longer-run concentration patterns easier to compare.'
+    id: 'figure-14',
+    title: 'Figure 14. Top 20 States Heatmap of Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_14_top20_states_heatmap_crude_rate.png`,
+    caption:
+      'This heatmap focuses on higher-rate states and shows persistent concentration across the study period.',
   },
   {
-    id: 15,
-    title: 'Figure 15. Lowest 20 States Heatmap of Crude Death Rate',
-    path: '/images/figure_15_least20_states_heatmap_crude_rate.png',
-    caption: 'This heatmap focuses on lower-rate states to show persistent contrasts over time.'
+    id: 'figure-15',
+    title: 'Figure 15. Lowest 20 States Heatmap of Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_15_least20_states_heatmap_crude_rate.png`,
+    caption:
+      'This heatmap shows the lower-rate states and their relatively stable position over time.',
   },
   {
-    id: 16,
-    title: 'Figure 16. U.S. Map of Average Crude Death Rate',
-    path: '/images/figure_16_us_map_average_crude_rate.png',
-    caption: 'The geographic pattern shows strong state-level differences in long-term average crude death rates.'
+    id: 'figure-16',
+    title: 'Figure 16. U.S. Map of Average Crude Gun-Related Death Rate',
+    image: `${IMG_BASE}figure_16_us_map_average_crude_rate.png`,
+    caption:
+      'The national map shows geographic clustering in average crude death rates across states.',
   },
   {
-    id: 17,
-    title: 'Figure 17. U.S. Map of Total Deaths',
-    path: '/images/figure_17_us_map_total_deaths.png',
-    caption: 'Large-population states account for the highest total counts of gun-related deaths.'
+    id: 'figure-17',
+    title: 'Figure 17. U.S. Map of Total Gun-Related Deaths',
+    image: `${IMG_BASE}figure_17_us_map_total_deaths.png`,
+    caption:
+      'This map highlights the states with the largest overall number of gun-related deaths.',
   },
   {
-    id: 18,
-    title: 'Figure 18. U.S. Map of Crude Death Rate Change (2000–2019)',
-    path: '/images/figure_18_us_map_crude_rate_change_2000_2019.png',
-    caption: 'The change map highlights where death rates rose or fell most clearly over the study period.'
+    id: 'figure-18',
+    title: 'Figure 18. U.S. Map of Crude Death Rate Change, 2000–2019',
+    image: `${IMG_BASE}figure_18_us_map_crude_rate_change_2000_2019.png`,
+    caption:
+      'This map shows that the direction and scale of change were not evenly distributed across the country.',
   },
 ]
 
 export const regionalFigures = [
   {
-    id: 19,
+    id: 'figure-19',
     title: 'Figure 19. Total Gun-Related Deaths by Region',
-    path: '/images/figure_19_total_firearm_deaths_by_region.png',
-    caption: 'Regional totals help compare overall burden across major U.S. regions.'
+    image: `${IMG_BASE}figure_19_total_firearm_deaths_by_region.png`,
+    caption:
+      'Regional totals show that the South carried the highest concentration of deaths.',
   },
   {
-    id: 20,
-    title: 'Figure 20. Average Crude Death Rate by Region',
-    path: '/images/figure_20_average_crude_rate_by_region.png',
-    caption: 'Average crude rates show sustained regional differences rather than one-year fluctuations.'
+    id: 'figure-20',
+    title: 'Figure 20. Average Crude Gun-Related Death Rate by Region',
+    image: `${IMG_BASE}figure_20_average_crude_rate_by_region.png`,
+    caption:
+      'Average regional crude death rates show a clear contrast between the South and the Northeast.',
   },
   {
-    id: 21,
-    title: 'Figure 21. Median Crude Death Rate by Region',
-    path: '/images/figure_21_median_crude_rate_by_region.png',
-    caption: 'The median perspective helps limit the influence of outlier states within each region.'
+    id: 'figure-21',
+    title: 'Figure 21. Median Crude Gun-Related Death Rate by Region',
+    image: `${IMG_BASE}figure_21_median_crude_rate_by_region.png`,
+    caption:
+      'Median values support the broader regional pattern observed in the average rates.',
   },
   {
-    id: 22,
-    title: 'Figure 22. Regional Crude Death Rate Trends',
-    path: '/images/figure_22_regional_crude_rate_trends.png',
-    caption: 'Regional rate trends show how divergence persisted across the study period.'
+    id: 'figure-22',
+    title: 'Figure 22. Regional Crude Gun-Related Death Rate Trends',
+    image: `${IMG_BASE}figure_22_regional_crude_rate_trends.png`,
+    caption:
+      'This figure tracks how regional crude death rates changed over time.',
   },
   {
-    id: 23,
-    title: 'Figure 23. Regional Total Death Trends',
-    path: '/images/figure_23_regional_total_deaths_trends.png',
-    caption: 'Regional totals reveal how counts shifted over time across broad geographic areas.'
+    id: 'figure-23',
+    title: 'Figure 23. Regional Total Gun-Related Death Trends',
+    image: `${IMG_BASE}figure_23_regional_total_deaths_trends.png`,
+    caption:
+      'This figure compares long-term regional movement in total gun-related deaths.',
   },
   {
-    id: 24,
-    title: 'Figure 24. Regional Crude Death Rate: 2000 vs 2019',
-    path: '/images/figure_24_regional_crude_rate_2000_vs_2019.png',
-    caption: 'This comparison highlights the change between the first and final year by region.'
+    id: 'figure-24',
+    title: 'Figure 24. Regional Crude Gun-Related Death Rate: 2000 vs 2019',
+    image: `${IMG_BASE}figure_24_regional_crude_rate_2000_vs_2019.png`,
+    caption:
+      'This figure compares regional crude death rates at the start and end of the study period.',
   },
   {
-    id: 25,
-    title: 'Figure 25. Regional Deaths: 2000 vs 2019',
-    path: '/images/figure_25_regional_deaths_2000_vs_2019.png',
-    caption: 'The first-year versus final-year comparison shows how regional totals evolved.'
+    id: 'figure-25',
+    title: 'Figure 25. Regional Gun-Related Deaths: 2000 vs 2019',
+    image: `${IMG_BASE}figure_25_regional_deaths_2000_vs_2019.png`,
+    caption:
+      'This figure compares regional totals in gun-related deaths between 2000 and 2019.',
   },
 ]
 
@@ -222,9 +252,9 @@ export const policyCards = [
   {
     title: 'Lower-rate states with stricter firearm policy profiles',
     states: ['Massachusetts', 'New Jersey', 'Hawaii', 'New York'],
-    policyTypes: [
-      'Purchaser licensing or permit-to-purchase',
-      'Stronger background check frameworks',
+    points: [
+      'Purchaser licensing or permit-to-purchase frameworks',
+      'Stronger background check systems',
       'Safe-storage requirements',
       'Child-access prevention laws',
       'Stricter regulation of public carry',
@@ -234,20 +264,39 @@ export const policyCards = [
   {
     title: 'Higher-rate states with more permissive firearm policy profiles',
     states: ['Wyoming', 'Mississippi', 'Alabama', 'Louisiana', 'Alaska'],
-    policyTypes: [
+    points: [
       'Weaker purchaser screening systems',
       'Fewer waiting period requirements',
       'More permissive concealed carry environments',
-      'Weaker safe-storage or child-access controls in some cases',
+      'Weaker safe-storage controls in some cases',
+      'Weaker child-access prevention controls in some cases',
     ],
   },
 ]
 
 export const manifestItems = [
-  { label: 'Website type', value: 'Frontend-only academic visualization site' },
-  { label: 'Built with', value: 'React, Vite, Tailwind CSS' },
-  { label: 'Content type', value: 'Static figures and descriptive interpretation' },
-  { label: 'Figures included', value: '25' },
-  { label: 'Data handling', value: 'No backend or personal data used' },
-  { label: 'Repository', value: 'Add GitHub repository URL' },
+  {
+    label: 'Website Type',
+    value: 'Frontend-only academic visualization site',
+  },
+  {
+    label: 'Built With',
+    value: 'React, Vite, Tailwind CSS',
+  },
+  {
+    label: 'Content Type',
+    value: 'Static figures and descriptive interpretation',
+  },
+  {
+    label: 'Figures Included',
+    value: '25',
+  },
+  {
+    label: 'Repository',
+    value: 'GitHub-hosted project repository',
+  },
+  {
+    label: 'Deployment',
+    value: 'Published through GitHub Pages',
+  },
 ]
