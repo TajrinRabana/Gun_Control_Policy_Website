@@ -44,7 +44,7 @@ const HeroSection = () => {
                 Institution
               </p>
               <p className="mt-2 font-semibold text-slate-800">
-                City University of New York (CUNY)
+                CUNY Graduate center
               </p>
             </div>
 
